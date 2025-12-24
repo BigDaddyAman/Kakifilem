@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
 
-# content-signal: search = yes
-# content-signal: ai-input = no
-# content-signal: ai-train = no
-
-Sitemap: https://kakifilem.com/sitemap.xml
+Sitemap: https://www.kakifilem.com/sitemap.xml
