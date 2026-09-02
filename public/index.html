@@ -83,16 +83,25 @@
 </div>
 
 <div class="nav-links">
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+
+    <button class="nav-toggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
         ☰ Menu
     </button>
 
-    <div class="nav-menu">
+    <nav class="nav-menu">
         <a href="#about">About</a>
         <a href="/contact.html">Contact</a>
         <a href="/verify/">Verify</a>
-        <a href="https://docs.kakifilem.com/privacy" target="_blank" rel="noopener">Privacy</a>
-    </div>
+        <a href="https://docs.kakifilem.com/privacy"
+           target="_blank"
+           rel="noopener">
+            Privacy
+        </a>
+    </nav>
+
 </div>
 
 <div class="showcase-section">
@@ -244,13 +253,15 @@ document.querySelectorAll('.faq-question').forEach(q => {
     });
 });
 
-/* Mobile navigation */
+/* MOBILE NAVIGATION */
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
 navToggle.addEventListener('click', () => {
     const isOpen = navMenu.classList.toggle('open');
+
     navToggle.setAttribute('aria-expanded', isOpen);
+    navToggle.textContent = isOpen ? '✕ Close' : '☰ Menu';
 });
 </script>
 
