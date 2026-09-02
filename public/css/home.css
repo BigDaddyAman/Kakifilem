@@ -434,20 +434,23 @@ footer p {
 }
 
 .copyright-button {
-    background: linear-gradient(45deg, #4ff, #4f9);
-    color: #1a1a2e;
+    display: inline-block;
+    background: rgba(79, 255, 255, 0.12);
+    border: 1px solid rgba(79, 255, 255, 0.45);
+    color: #4ff !important;
     padding: 0.9rem 2rem;
     border-radius: 30px;
     font-size: 1.1rem;
     font-weight: 600;
-    text-decoration: none;
-    box-shadow: 0 8px 20px rgba(79,255,255,0.35);
+    text-decoration: none !important;
     transition: all 0.3s ease;
 }
 
 .copyright-button:hover {
+    background: rgba(79, 255, 255, 0.2);
+    border-color: #4ff;
     transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(79,255,255,0.55);
+    box-shadow: 0 8px 20px rgba(79, 255, 255, 0.25);
 }
 
 /* LINKS */
