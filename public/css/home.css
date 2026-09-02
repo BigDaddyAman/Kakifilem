@@ -53,24 +53,74 @@ body {
 .nav-links {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    align-items: center;
     padding: 1rem;
     background: rgba(0,0,0,0.3);
     margin-bottom: 2rem;
 }
 
-.nav-links a {
-    color: #4ff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    transition: all 0.3s ease;
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.nav-links a:hover {
+.nav-menu a,
+.nav-menu a:visited {
+    color: #4ff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.55rem 0.9rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-menu a:hover {
     background: rgba(79, 255, 255, 0.1);
     transform: translateY(-2px);
+}
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid rgba(79,255,255,0.4);
+    color: #4ff;
+    padding: 0.55rem 1rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* MOBILE NAVIGATION */
+@media (max-width: 768px) {
+    .nav-links {
+        margin-bottom: 1rem;
+        position: relative;
+        flex-direction: column;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0.75rem;
+        gap: 0.25rem;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-menu a {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* SHOWCASE SECTION */
@@ -316,6 +366,17 @@ footer p {
     }
 }
 
+@media (min-width: 769px) {
+    .try-now-button {
+        font-size: 1.4rem;
+        padding: 1.2rem 2.5rem;
+    }
+
+    .showcase-title {
+        font-size: 3rem;
+    }
+}
+
 @media (min-width: 768px) {
     .try-now-button {
         font-size: 1.4rem;
@@ -387,4 +448,25 @@ footer p {
 .copyright-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 12px 25px rgba(79,255,255,0.55);
+}
+
+/* LINKS */
+.about-section a,
+.about-section a:visited {
+    color: #4ff;
+    text-decoration: none;
+}
+
+.about-section a:hover {
+    text-decoration: underline;
+}
+
+.bot-link,
+.bot-link:visited {
+    color: #4ff !important;
+    text-decoration: none;
+}
+
+.bot-link:hover {
+    text-decoration: underline;
 }

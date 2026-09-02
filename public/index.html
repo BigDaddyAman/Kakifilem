@@ -11,12 +11,12 @@
 
     <meta name="robots" content="index, follow">
 
-    <link rel="canonical" href="https://kakifilem.com/">
+    <link rel="canonical" href="https://www.kakifilem.com/">
 
     <meta property="og:title" content="KakiFilem – Telegram Movie Search Bot">
     <meta property="og:description" content="Search and receive movies and video files instantly inside Telegram using KakiFilem.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kakifilem.com/">
+    <meta property="og:url" content="https://www.kakifilem.com/">
     <meta property="og:image" content="https://kakifilem.com/og-image.jpg">
     <meta property="og:locale" content="en_US">
 
@@ -41,7 +41,7 @@
       "operatingSystem": "Telegram",
       "applicationCategory": "EntertainmentApplication",
       "description": "Telegram-based movie and video search bot for instant content discovery.",
-      "url": "https://kakifilem.com/"
+      "url": "https://www.kakifilem.com/"
     }
     </script>
 
@@ -83,10 +83,16 @@
 </div>
 
 <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="/contact.html">Contact</a>
-    <a href="/verify/">Verify</a>
-    <a href="https://docs.kakifilem.com/privacy" target="_blank" rel="noopener">Privacy</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        ☰ Menu
+    </button>
+
+    <div class="nav-menu">
+        <a href="#about">About</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/verify/">Verify</a>
+        <a href="https://docs.kakifilem.com/privacy" target="_blank" rel="noopener">Privacy</a>
+    </div>
 </div>
 
 <div class="showcase-section">
@@ -231,10 +237,20 @@
 </footer>
 
 <script>
+/* FAQ */
 document.querySelectorAll('.faq-question').forEach(q => {
     q.addEventListener('click', () => {
         q.classList.toggle('active');
     });
+});
+
+/* Mobile navigation */
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+navToggle.addEventListener('click', () => {
+    const isOpen = navMenu.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
 });
 </script>
 
