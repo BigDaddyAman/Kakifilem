@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>404 - Page Not Found | KakiFilem</title>
+
+    <meta
+        name="description"
+        content="The page you're looking for could not be found. Return to the official KakiFilem website."
+    >
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="icon" href="https://favicon.kakifilem.com/favicon.ico">
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="https://favicon.kakifilem.com/favicon-32x32.png"
+    >
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* GLOBAL */
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* BACKGROUND EFFECT */
+        body::before {
+            content: "";
+            position: fixed;
+            width: 450px;
+            height: 450px;
+            top: -180px;
+            left: -180px;
+            background: rgba(79, 255, 255, 0.08);
+            border-radius: 50%;
+            filter: blur(80px);
+            pointer-events: none;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            bottom: -180px;
+            right: -150px;
+            background: rgba(79, 255, 153, 0.06);
+            border-radius: 50%;
+            filter: blur(80px);
+            pointer-events: none;
+        }
+
+        /* MAIN */
+        .error-page {
+            width: 100%;
+            max-width: 760px;
+            margin: auto;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* LOGO */
+        .logo {
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow:
+                0 0 25px rgba(79, 255, 255, 0.25),
+                0 0 60px rgba(79, 255, 255, 0.08);
+            margin-bottom: 2rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* ERROR CODE */
+        .error-code {
+            font-size: clamp(5rem, 18vw, 9rem);
+            line-height: 0.9;
+            font-weight: 800;
+            letter-spacing: -0.06em;
+            color: #4ff;
+            text-shadow:
+                0 0 20px rgba(79, 255, 255, 0.25),
+                0 0 50px rgba(79, 255, 255, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        /* CONTENT */
+        h1 {
+            font-size: clamp(1.6rem, 5vw, 2.4rem);
+            margin-bottom: 1rem;
+        }
+
+        .message {
+            max-width: 560px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .sub-message {
+            margin-top: 0.7rem;
+            color: rgba(255, 255, 255, 0.55);
+            font-size: 0.9rem;
+        }
+
+        /* BUTTONS */
+        .actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 2rem;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.85rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+        }
+
+        .button-primary {
+            background: linear-gradient(45deg, #4ff, #4f9);
+            color: #1a1a2e;
+            box-shadow: 0 8px 20px rgba(79, 255, 255, 0.2);
+        }
+
+        .button-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            color: #4ff;
+            border: 1px solid rgba(79, 255, 255, 0.2);
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+        }
+
+        .button-primary:hover {
+            box-shadow: 0 12px 28px rgba(79, 255, 255, 0.35);
+        }
+
+        .button-secondary:hover {
+            background: rgba(79, 255, 255, 0.08);
+        }
+
+        /* FOOTER */
+        .footer {
+            padding: 1.5rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.45);
+            font-size: 0.8rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+            .error-page {
+                padding: 2rem 1.2rem;
+            }
+
+            .logo {
+                width: 90px;
+                height: 90px;
+                margin-bottom: 1.5rem;
+            }
+
+            .message {
+                font-size: 1rem;
+            }
+
+            .actions {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .button {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        /* REDUCED MOTION */
+        @media (prefers-reduced-motion: reduce) {
+            .logo {
+                animation: none;
+            }
+
+            .button {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="error-page">
+
+        <img
+            src="https://cdn.kakifilem.com/kakifilemv2.webp"
+            alt="KakiFilem Logo"
+            class="logo"
+        >
+
+        <div class="error-code">404</div>
+
+        <h1>Oops! This page went missing 🎬</h1>
+
+        <p class="message">
+            Looks like this page has left the cinema.
+            The link may be incorrect, outdated, or the page may have been moved.
+        </p>
+
+        <p class="sub-message">
+            Don't worry — KakiFilem is still here.
+        </p>
+
+        <div class="actions">
+
+            <a href="/" class="button button-primary">
+                🏠 Back to KakiFilem
+            </a>
+
+            <a href="/verify/" class="button button-secondary">
+                🔍 Verify Official Links
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        © 2026 KakiFilem. All rights reserved.
+    </footer>
+
+</body>
+</html>
